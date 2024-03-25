@@ -68,7 +68,7 @@ h2{
 
 
 
-// header style 
+/* // header style  */
 header{
     padding-top: .3rem;
     width: 100%;
@@ -114,7 +114,7 @@ header{
 }
 
 
-// header-bottom 
+/* // header-bottom  */
 .header-bottom__wrapper{
     display: flex;
     align-items: center;
@@ -131,7 +131,7 @@ header{
     display: inline-block;
 }
 
-// header-top
+/* // header-top */
 .header-top__wrapper{
     display: flex;
     align-items: center;
@@ -140,7 +140,7 @@ header{
     display: inline-block;
     margin-right: 1rem;
 }
-// search form style
+/* // search form style */
 .search-form {
     position: relative;
     max-width: 19em;
@@ -175,7 +175,7 @@ header{
     color: white;
   }
 }
-// search form style
+/* // search form style */
 
 .header-top__logo{
     display: none;
@@ -193,14 +193,7 @@ header{
             width: 30px;
             height: 30px;
         }
-        .login-btn{
-            font-size: 1rem;
-            font-family: "Inter", sans-serif;
-            color: gray;
-        }
-        .login-btn:hover{
-            color: #BD0000 ;
-        }
+        
     }
 }
 .header-top__favorites{
@@ -211,7 +204,7 @@ header{
         height: 30px;
     }
 }
-// dropup style 
+/* // dropup style  */
 .dropup {
     position: relative;
     display: inline-block;
@@ -248,17 +241,16 @@ header{
         background-color: #ffe8c1;
         color: black;
       }
-// dropup style
+/* // dropup style */
 
-// header style 
+/* // header style  */
 
 
-// card section style 
+/* // card section style  */
 .card-section{   
     width: 100%;
     position: relative;
 }
-
 .card-section__background{
     width: 100%;
     position: absolute;
@@ -273,16 +265,21 @@ header{
     max-width: 1200px;
     margin: 0 auto;
 }
+@media screen and (max-width:1400px){
+    .card-wrapper{
+        max-width: 1100px;
+    }
+}
 
 
-// card syle 
+/* // card syle  */
 .card{
+    font-size: 14px;
     max-width: 18em;
     height: 27em;
     border: 1px solid black;
     border-radius:2em;
     background-color: white;
-    margin-right: 2em;
 }
 .card__top{
    width: 100%;
@@ -334,10 +331,204 @@ header{
         font-family: "Inter", sans-serif;
     }
 }
-// card syle
+/* // card syle */
 
 
 
+/* popup login */
+.login__title{
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  .login__input {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+/* Add a background color when the inputs get focus */
+.login__input:focus{
+  background-color: #ddd;
+  outline: none;
+}
+/* button style */
+.login__button {
+    color: gray;
+    display: inline-block;
+    background-color: #fff;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+}
+.login-btn:hover{
+    color: #BD0000 ;
+};
+.login__button:hover {
+  opacity:1;
+}
+/* Дополнительные стили для кнопки Отмена */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.login__container {
+  padding: 16px;
+}
+
+/* modal background */
+.login__modal{
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  z-index: 1; /* Сидеть на вершине */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Включите прокрутку, если это необходимо */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+.login__modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+}
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+/* close button (x) */
+.login__close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+.login__close:hover,
+.login__close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+/* Clear floats */
+.login__clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+/* popup login */
 
 
+/* footer style */
+.footer{
+    background-color: #fffbf4;
+    margin-top: 2rem;
+}
+.footer__container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.footer__content-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+.footer__content-top{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.footer__img{
+    display: inline-block;
+    width: 85px;
+    height: 99px;
+    img{
+        background-color: white;
+    min-width: 85px;
+    min-height: 99px;
+    }
+}
+.footer__tg-wrapper{
+    margin-top: 1rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p{
+        text-align: center;
+        margin: 0;
+    }
+}
+.footer__tg{
+    margin-top: 1.4rem;
+    width: 190px;
+    position: relative;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    
+    img{
+        position: absolute;
+        z-index: 20;
+    }
+    span{
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 30px;
+        padding: .2rem .3rem .2rem 1.2rem ;
+        border: 1px solid rgb(255, 255, 255);
+        color: white;
+        border-radius: 10px;
+        background-color: rgb(59, 59, 192);        
+    }
+    span:hover{
+        font-weight: 500;
+        font-size: 1.1rem;
+        
+    }
+    img:hover{
+        width: 52px;
+        height: 52px;
+    }
+}
+
+ .footer__content-bottom{
+    display: flex;
+    align-items: center;
+} 
+.footer__icons-item{
+    img{
+        width: 4.5em;
+        height: 4.5em;
+    }
+}
+.footer__logo{
+    text-align: center;
+}
+/* footer style */
 
